@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-size: 1rem;
 }
 
 /*html {
@@ -14,6 +15,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  background-color: rgb(245, 245, 245);
 }
 
 ul {
@@ -38,13 +40,11 @@ img {
 
 /* new navbar */
 nav {
-  background: rgb(255, 255, 255);
   padding: 5px 20px;
-}
-nav {
   color: black;
   text-decoration: none;
 }
+
 .menu {
   overflow: hidden;
 }
@@ -83,7 +83,9 @@ nav {
 .item a:hover::after {
   width: 100%;
 }
-
+.menu .logo {
+  font-size: 2rem;
+}
 .logo {
   font-family: "Oswald", sans-serif;
   font-style: italic;
@@ -201,6 +203,7 @@ nav {
   border-radius: 50%;
   width: 100%;
   height: 500px;
+  margin: 20px;
 }
 
 .header-image .text-img {
@@ -215,6 +218,27 @@ nav {
   top: 30%;
   width: 60%;
   font-size: 4.5vw;
+}
+
+.showcase {
+  height: 400px;
+  background-color: rgb(202, 202, 204);
+  color: white;
+  position: relative;
+}
+
+.showcase h1 {
+  font-size: 40px;
+}
+
+.showcase p {
+  margin: 20px 0;
+}
+
+.showcase .grid {
+  grid-template-columns: 55% 45%;
+  gap: 30px;
+  overflow: visible;
 }
 
 /*contact form */
@@ -294,13 +318,29 @@ textarea {
 /*footer*/
 
 .footer {
-  font-size: 10px;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: black;
+  margin: 0 10px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 50px;
+}
+
+/* skillset */
+.skillset .flex {
+  flex-wrap: wrap;
+}
+
+.skillset .card {
   text-align: center;
+  margin: 18px 10px 40px;
+  transition: transform 0.2s ease-in;
+}
+
+.skillset .card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.skillset .card:hover {
+  transform: translateY(-15px);
 }
 
 .hidden {
@@ -312,6 +352,15 @@ textarea {
 .flex {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
   align-items: center;
   height: 100%;
 }
@@ -331,12 +380,63 @@ textarea {
   font-size: 14px;
 }
 
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background-color: rgb(218, 218, 218);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+}
+
+.text-center {
+  padding: 5px;
+  text-align: center;
+}
+
 .column-one {
   margin: 10px;
+  color: rgb(104, 103, 103);
 }
 
 .column-two {
   margin: 10px;
+  color: rgb(104, 103, 103);
+}
+
+.about-h1 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.card {
+  background-color: white;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+}
+
+.contact-box-card {
+  background-color: white;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+}
+
+i {
+  color: rgb(0, 0, 0);
+}
+
+.big {
+  font-size: 2rem;
+}
+
+.ls {
+  letter-spacing: 1px;
 }
 
 @media (max-width: 768px) {
