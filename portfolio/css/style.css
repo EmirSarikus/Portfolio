@@ -41,7 +41,7 @@ img {
 /* new navbar */
 nav {
   padding: 5px 20px;
-  color: black;
+  color: #333;
   text-decoration: none;
 }
 
@@ -193,6 +193,88 @@ nav {
   }
 }
 
+/* hero */
+.hero {
+  padding: 200px 0;
+  background-color: #d6d6d6;
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  background-image: url(mountain.jpg);
+}
+
+.hero-h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.hero-text {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn-hero {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  transition: transform 0.2s ease-in;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-hero:hover {
+  transform: translateY(-5px);
+  color: #000;
+  background-color: #f8f8f8;
+}
+
+.hero-img {
+  margin-top: 2em;
+}
+
+.hero p {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  max-width: 60%;
+  color: rgb(41, 41, 41);
+}
+
+@media (min-wdith: 800px) {
+  .hero-text {
+    width: 62%;
+  }
+
+  .hero-img {
+    width: 32%;
+  }
+}
+
+/* About */
+
+.about {
+  margin-top: 40px;
+}
+
+.column-one {
+  margin: 10px;
+  color: rgb(104, 103, 103);
+}
+
+.column-two {
+  margin: 10px;
+  color: rgb(104, 103, 103);
+}
+
+.about-h1 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #333;
+}
+
 /* header */
 
 .header-image {
@@ -209,7 +291,7 @@ nav {
 .header-image .text-img {
   font-family: "Oswald", sans-serif;
   position: absolute;
-  color: white;
+  color: rgb(174, 174, 174);
   z-index: 999;
   margin: 0 auto;
   left: 0;
@@ -220,25 +302,33 @@ nav {
   font-size: 4.5vw;
 }
 
-.showcase {
-  height: 400px;
-  background-color: rgb(202, 202, 204);
-  color: white;
-  position: relative;
+/* skillset */
+
+.skillset {
+  margin-top: 20px;
+}
+.skillset .flex {
+  flex-wrap: wrap;
 }
 
-.showcase h1 {
-  font-size: 40px;
+.skillset .card {
+  text-align: center;
+  margin: 18px 10px 40px;
+  transition: transform 0.2s ease-in;
 }
 
-.showcase p {
-  margin: 20px 0;
+.skillset-h2 {
+  margin-bottom: 20px;
+  color: #333;
 }
 
-.showcase .grid {
-  grid-template-columns: 55% 45%;
-  gap: 30px;
-  overflow: visible;
+.skillset .card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.skillset .card:hover {
+  transform: translateY(-15px);
 }
 
 /*contact form */
@@ -321,30 +411,11 @@ textarea {
   margin: 0 10px;
   grid-template-columns: repeat(3, 1fr);
   padding: 50px;
+  color: black;
 }
 
-/* skillset */
-.skillset .flex {
-  flex-wrap: wrap;
-}
-
-.skillset .card {
-  text-align: center;
-  margin: 18px 10px 40px;
-  transition: transform 0.2s ease-in;
-}
-
-.skillset .card h4 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.skillset .card:hover {
-  transform: translateY(-15px);
-}
-
-.hidden {
-  display: none;
+.footer-p {
+  font-weight: bold;
 }
 
 /* utils */
@@ -400,14 +471,8 @@ textarea {
   color: rgb(104, 103, 103);
 }
 
-.column-two {
-  margin: 10px;
-  color: rgb(104, 103, 103);
-}
-
-.about-h1 {
-  font-weight: bold;
-  font-size: 2rem;
+.hidden {
+  display: none;
 }
 
 .card {
