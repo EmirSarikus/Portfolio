@@ -22,16 +22,22 @@
     src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
     crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
     <title>Portfolio Emir</title>
   </head>
   <body>
-
+    
     <!--navbar-->
+
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
+    
     
     <div class="container">
       <nav>
       <ul class="menu">
-          <li class="logo"><a href="index.html">EMIR</a></li>
+        <li class="logo"><a href="index.html">EMIR</a></li>
           <li class="item"><a href="index.html">About</a></li>
           <li class="item"><a href="portfolio.html">Portfolio</a></li>
           <li class="item"><a href="contact.html">Contact</a></li>
@@ -40,6 +46,7 @@
       </ul>
     </nav>
   </div>
+  
 
   <section class="hero">
     <div class="container row">
@@ -50,11 +57,18 @@
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
           ad minim veniam.
         </p>
-        <a href="#" class="btn-hero card-hero">Download my CV</a>
-      </div>
-
+        <div class="pointing-down">
+          <button class="btn-hero card-hero btn-readmore">Read more</button>
+        <div class="arrow bounce">
+          <a class="fa fa-arrow-down fa-2x" href="#"></a>
+        </div>
     </div>
+    
+
+
   </section>
+
+  
 
     <!-- About -->
     <section class="about">
@@ -88,7 +102,7 @@
   <div class="container flex">
     <div class="card">
       <h4>HTML5</h4>
-      <img id="imageeid" src="img/logos/html55.png" alt="" />
+      <img src="img/logos/html55.png" alt="" />
     </div>
     <div class="card">
       <h4>CSS3</h4>
@@ -122,23 +136,23 @@
 
   <!--Footer-->
   <footer class="footer">
-    <div class="container grid">
+    <div class="container flex">
       <div class="footer-info">
         <p class="footer-p">Emir Sarikus</p>
         <p>Copyright &copy; 2021</p>
       </div>
       <div class="social">
-        <a href="#"><i class="fab fa-github fa-2x"></i></a>
+        <a href="#"><i class="fab fa-github fa-2x"></i></a>.
         <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
         <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
         <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
       </div>
     </div>
   </footer>
-
-
-
+    
+ 
     <script src="js/main.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/preloader.js"></script>
+    <script src="js/smoothscroll.js"></script>
   </body>
 </html>

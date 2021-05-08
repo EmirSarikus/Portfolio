@@ -20,6 +20,8 @@ body {
 
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -40,7 +42,7 @@ img {
 
 /* new navbar */
 nav {
-  padding: 5px 20px;
+  padding: 30px 30px;
   color: #333;
   text-decoration: none;
 }
@@ -54,7 +56,7 @@ nav {
   white-space: nowrap;
 }
 
-.item a {
+/*.item a {
   position: relative;
   text-decoration: none;
   color: black;
@@ -82,10 +84,8 @@ nav {
 }
 .item a:hover::after {
   width: 100%;
-}
-.menu .logo {
-  font-size: 2rem;
-}
+}*/
+
 .logo {
   font-family: "Oswald", sans-serif;
   font-style: italic;
@@ -173,6 +173,18 @@ nav {
   }
 }
 
+/*navbar removed effects when toggled */
+@media (max-width: 768px) {
+  .item a {
+    color: #333;
+  }
+
+  .item a:hover {
+    color: rgb(87, 87, 87);
+    transition: 0.3 ease-in;
+  }
+}
+
 /* Desktop menu */
 @media all and (min-width: 768px) {
   .item {
@@ -190,6 +202,36 @@ nav {
   }
   .menu li {
     padding: 15px 10px;
+  }
+
+  .item a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    margin: 0 5px;
+    top: 0;
+    transition: top ease-in-out 0.1s;
+    text-shadow: rgb(214, 214, 214) 1px 0 10px;
+  }
+
+  .item a:after {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.2s;
+  }
+  .item a:hover {
+    color: rgb(87, 87, 87);
+    transition: 0.3 ease-in;
+    top: -2px;
+  }
+  .item a:hover::after {
+    width: 100%;
   }
 }
 
@@ -248,6 +290,36 @@ nav {
   color: rgb(41, 41, 41);
 }
 
+.arrow {
+  text-align: center;
+  margin-top: 30px;
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+.fa-arrow-down {
+  color: white;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
 @media (min-wdith: 800px) {
   .hero-text {
     width: 62%;
@@ -261,7 +333,7 @@ nav {
 /* About */
 
 .about {
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .column-one {
@@ -284,7 +356,7 @@ nav {
 /* skillset */
 
 .skillset {
-  margin-top: 20px;
+  margin-top: 60px;
 }
 .skillset .flex {
   flex-wrap: wrap;
@@ -310,19 +382,19 @@ nav {
   transform: translateY(-15px);
 }
 
-/*contact form */
-
-.contact-box {
+.contact-box-card {
   margin: 0 auto;
   max-width: 500px;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #fff;
-}
-
-.contact-box-container {
-  margin: 0 auto;
+  background-color: red;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+  animation: slideInFromRight 1s ease-in;
 }
 
 .contact-h2 {
@@ -383,18 +455,21 @@ textarea {
   background-color: #fff;
   cursor: pointer;
 }
+*/
 
 /*footer*/
 
 .footer {
   margin: 0 10px;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 50px;
   color: black;
 }
 
 .footer-p {
   font-weight: bold;
+}
+
+.footer-info {
+  padding: 20px;
 }
 
 /* utils */
@@ -473,6 +548,12 @@ textarea {
 
 i {
   color: rgb(0, 0, 0);
+  transition: transform 0.2s ease-in;
+}
+
+.fab:hover {
+  color: rgb(39, 39, 39);
+  transform: translateY(-2px);
 }
 
 .big {
@@ -489,5 +570,43 @@ i {
   }
   .about-h1 {
     text-align: center;
+  }
+}
+
+/*pre loader*/
+
+.loader-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #111;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000000;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid;
+  color: #ffffff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: loader 1.2s linear infinite;
+}
+
+@keyframes loader {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
