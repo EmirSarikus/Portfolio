@@ -249,6 +249,7 @@ nav {
 .hero-text {
   margin: 0 auto;
   text-align: center;
+  overflow: hidden;
 }
 
 .hero-h1 {
@@ -256,6 +257,29 @@ nav {
   color: #333;
   font-family: "Oswald", sans-serif;
   font-size: 6rem;
+  animation: slideInFromLeft 1s ease-in;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.hero-paragraph {
+  animation: slideInFromRight 1s ease-in;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .btn-hero {
@@ -394,7 +418,6 @@ nav {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
   margin: 10px;
-  animation: slideInFromRight 1s ease-in;
 }
 
 .contact-h2 {
